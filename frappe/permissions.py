@@ -23,6 +23,7 @@ rights = (
 	"import",
 	"export",
 	"set_user_permissions",
+	"if_no_user_permissions",
 	"share",
 )
 
@@ -652,7 +653,7 @@ def allow_everything():
 	returns a dict with access to everything
 	eg. {"read": 1, "write": 1, ...}
 	"""
-	perm = {ptype: 1 for ptype in rights}
+	perm = {ptype: 1 for ptype in rights if ptype != "if_no_user_permissions"}
 	return perm
 
 

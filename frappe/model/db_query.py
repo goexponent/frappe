@@ -916,6 +916,9 @@ class DatabaseQuery:
 			if not only_if_shared and self.shared and conditions:
 				conditions = f"(({conditions}) or ({self.get_share_condition()}))"
 
+
+			if not conditions and role_permissions.get("if_no_user_permissions") == 1:
+				return "(0 = 1)"
 			return conditions
 
 		else:
