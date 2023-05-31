@@ -11,6 +11,7 @@
   "role_and_level",
   "role",
   "if_owner",
+  "if_no_user_permissions",
   "column_break_2",
   "permlevel",
   "section_break_4",
@@ -58,6 +59,13 @@
    "fieldtype": "Check",
    "label": "If user is the owner"
   },
+  {
+    "default": "0",
+    "description": "Restrict the users access to the doctype as long as no user permissions are set",
+    "fieldname": "if_no_user_permissions",
+    "fieldtype": "Check",
+    "label": "Restrict if no user permissions"
+   },
   {
    "fieldname": "column_break_2",
    "fieldtype": "Column Break"
